@@ -1,10 +1,11 @@
 ﻿using Leopotam.Ecs;
 using UnityEngine;
+using YohohoTest._src.CodeBase.Ecs.Systems.Spawn;
 using YohohoTest._src.CodeBase.UnityComponents.AssetManagement;
 using YohohoTest._src.CodeBase.UnityComponents.AssetManagement.Storages;
 using YohohoTest._src.CodeBase.UnityComponents.Data;
 
-namespace YohohoTest._src.CodeBase.EcsCore
+namespace YohohoTest._src.CodeBase.Ecs.Core
 {
     public class EcsStartup : MonoBehaviour
     {
@@ -35,7 +36,9 @@ namespace YohohoTest._src.CodeBase.EcsCore
 #endif
             
             _systems
+                .Add(new InitSpawnPlayerDataSystem())
                 .Inject(_sceneData)
+                .Inject(_assetsProviderService)
                 .Inject(_storagesDataKeeperService)
                 .Init();
         }
