@@ -16,3 +16,4 @@ MonoBehaviour:
   HeroRotationSpeed: 6
   CameraSpeed: 0.2
   CameraOffset: {x: 13.02, y: 17.43, z: 0}
+  SpawnRateRange: {x: 6, y: 13}

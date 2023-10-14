@@ -10,8 +10,14 @@ namespace YohohoTest._src.CodeBase.UnityComponents.Data
         public float HeroRotationSpeed;
         
 
-        [Header("Camera")] 
+        [Space(20)]
+        [Header("Camera")]
         public float CameraSpeed;
         public Vector3 CameraOffset;
+
+
+        [Space(20)]
+        [Header("Plants")]
+        public Vector2 SpawnRateRange;
     }
 }
