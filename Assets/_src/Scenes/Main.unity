@@ -3233,6 +3233,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _heroSpawnPoint: {fileID: 616733933}
+  _prefabFactory: {fileID: 0}
 --- !u!1001 &1579949584
 PrefabInstance:
   m_ObjectHideFlags: 0
