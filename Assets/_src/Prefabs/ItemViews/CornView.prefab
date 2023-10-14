@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2287076015411711124
 Transform:
   m_ObjectHideFlags: 0
@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 4076716336919471589}
   - component: {fileID: 2270022494160215731}
   - component: {fileID: -5122968129943318881}
+  - component: {fileID: 4627336498050726382}
   m_Layer: 0
   m_Name: CornView
   m_TagString: Untagged
@@ -143,6 +144,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c3b7f5e99744fb7abf4765646a94ece, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4627336498050726382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4076716336919471590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf6e8c4468ae44f1a34755824e80beb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Value:
+    CurrentStage: 0
+    DelayBetweenStages: 5
+    CurrentDelayBetweenStages: 0
+    StagesViews:
+    - {fileID: 7747556111181309314}
+    - {fileID: 2287076015411417268}
+    - {fileID: 6080660951518602049}
 --- !u!1 &6080660951518602049
 GameObject:
   m_ObjectHideFlags: 0
@@ -160,7 +181,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6080660951518773089
 Transform:
   m_ObjectHideFlags: 0

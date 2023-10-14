@@ -44,7 +44,6 @@ namespace YohohoTest._src.CodeBase.Ecs.Core
             Leopotam.Ecs.UnityIntegration.EcsWorldObserver.Create(_world);
             Leopotam.Ecs.UnityIntegration.EcsSystemsObserver.Create(_systems);
 #endif
-            
             _systems
                 .Add(new InitSpawnPlayerDataSystem())
                 .Add(new InitSpawnCameraDataSystem())
@@ -58,12 +57,14 @@ namespace YohohoTest._src.CodeBase.Ecs.Core
                 .Add(new PlayerRunAnimatorSystem())
                 .Add(new MoveFollowsObjectsSystem())
                 .Add(new PlantPullOutHandlerSystem())
+                .Add(new GrowSystem())
                 .OneFrame<PlantPulledOutEvent>()
                 .Inject(_staticData)
                 .Inject(_sceneData)
                 .Inject(_assetsProviderService)
                 .Inject(_storagesDataKeeperService)
                 .Init();
+
         }
 
         private void InitializeAssetsServices()
