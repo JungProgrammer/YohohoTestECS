@@ -2,6 +2,7 @@
 using UnityEngine;
 using YohohoTest._src.CodeBase.Ecs.Systems.Input;
 using YohohoTest._src.CodeBase.Ecs.Systems.Movement;
+using YohohoTest._src.CodeBase.Ecs.Systems.Rotation;
 using YohohoTest._src.CodeBase.Ecs.Systems.Spawn;
 using YohohoTest._src.CodeBase.UnityComponents.AssetManagement;
 using YohohoTest._src.CodeBase.UnityComponents.AssetManagement.Storages;
@@ -48,6 +49,7 @@ namespace YohohoTest._src.CodeBase.Ecs.Core
                 .Add(new SpawnSystem())
                 .Add(new PlayerInputHandlerSystem())
                 .Add(new PlayerMovementSystem())
+                .Add(new PlayerRotationSystem())
                 .Add(new MoveFollowsObjectsSystem())
                 .Inject(_staticData)
                 .Inject(_sceneData)

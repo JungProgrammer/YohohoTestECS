@@ -10,18 +10,21 @@ namespace YohohoTest._src.CodeBase.Ecs.Systems.Input
         private const string Horizontal = "Horizontal";
         private const string Vertical = "Vertical";
 
-        private EcsFilter<PlayerTag, MovementInputData> _filter;
+        private EcsFilter<PlayerTag, MovementInputData> _movementFilter;
+        private EcsFilter<PlayerTag, RotationInputData> _rotationFilter;
 
         public void Run()
         {
-            if (_filter.IsEmpty())
-                return;
-
-
-            foreach (int index in _filter)
+            foreach (int index in _movementFilter)
             {
-                ref MovementInputData movementInputData = ref _filter.Get2(index);
+                ref MovementInputData movementInputData = ref _movementFilter.Get2(index);
                 movementInputData.Direction = new Vector3(SimpleInput.GetAxis(Horizontal), SimpleInput.GetAxis(Vertical), 0).normalized;
+            }
+
+            foreach (int index in _rotationFilter)
+            {
+                ref RotationInputData rotationInputData = ref _rotationFilter.Get2(index);
+                rotationInputData.Direction = new Vector3(SimpleInput.GetAxis(Horizontal), SimpleInput.GetAxis(Vertical), 0).normalized;
             }
         }
     }

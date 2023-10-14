@@ -6,7 +6,9 @@ namespace YohohoTest._src.CodeBase.UnityComponents.Data
     public class StaticData : ScriptableObject
     {
         [Header("Hero")]
-        public float HeroSpeed;
+        public float HeroMovementSpeed;
+        public float HeroRotationSpeed;
+        
 
         [Header("Camera")] 
         public float CameraSpeed;

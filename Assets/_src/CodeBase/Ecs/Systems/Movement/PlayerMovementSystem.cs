@@ -30,7 +30,7 @@ namespace YohohoTest._src.CodeBase.Ecs.Systems.Movement
                 Vector3 movementDirection = cameraGameObjectLink.Value.transform.TransformDirection(movementInputData.Direction);
                 movementDirection.y = 0;
 
-                rigidbodyLink.Value.velocity = movementDirection.normalized * _staticData.HeroSpeed;
+                rigidbodyLink.Value.velocity = movementDirection.normalized * _staticData.HeroMovementSpeed;
             }
         }
     }
