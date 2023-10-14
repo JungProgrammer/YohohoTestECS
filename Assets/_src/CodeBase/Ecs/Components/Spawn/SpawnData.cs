@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Leopotam.Ecs;
+using UnityEngine;
 
 namespace YohohoTest._src.CodeBase.Ecs.Components.Spawn
 {
@@ -8,5 +9,6 @@ namespace YohohoTest._src.CodeBase.Ecs.Components.Spawn
         public Vector3 Position;
         public Quaternion Rotation;
         public Transform Parent;
+        public EcsEntity SpawnerEntity;
     }
 }
