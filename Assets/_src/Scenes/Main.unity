@@ -981,6 +981,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sceneData: {fileID: 1513114720}
+  _assetConfig: {fileID: 11400000, guid: 50320707cfdc1c44a9c5bdcc666949fa, type: 2}
 --- !u!4 &508313193
 Transform:
   m_ObjectHideFlags: 0

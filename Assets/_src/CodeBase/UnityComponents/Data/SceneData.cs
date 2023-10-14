@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace _src.CodeBase.UnityComponents.Data
+namespace YohohoTest._src.CodeBase.UnityComponents.Data
 {
     public class SceneData : MonoBehaviour
     {

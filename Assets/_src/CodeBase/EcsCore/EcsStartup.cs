@@ -1,31 +1,49 @@
-﻿using _src.CodeBase.UnityComponents.Data;
-using Leopotam.Ecs;
+﻿using Leopotam.Ecs;
 using UnityEngine;
+using YohohoTest._src.CodeBase.UnityComponents.AssetManagement;
+using YohohoTest._src.CodeBase.UnityComponents.AssetManagement.Storages;
+using YohohoTest._src.CodeBase.UnityComponents.Data;
 
-namespace _src.CodeBase.EcsCore
+namespace YohohoTest._src.CodeBase.EcsCore
 {
     public class EcsStartup : MonoBehaviour
     {
         [SerializeField] 
         private SceneData _sceneData;
+
+
+        [SerializeField] 
+        private AssetConfig _assetConfig;
         
         
         private EcsWorld _world;
         private EcsSystems _systems;
 
+        private IAssetsProvider _assetsProviderService;
+        private IStoragesDataKeeperService _storagesDataKeeperService;
+
         private void Start()
         {
             _world = new EcsWorld();
             _systems = new EcsSystems(_world);
-		
+
+            InitializeAssetsServices();
+
 #if UNITY_EDITOR
             Leopotam.Ecs.UnityIntegration.EcsWorldObserver.Create(_world);
             Leopotam.Ecs.UnityIntegration.EcsSystemsObserver.Create(_systems);
-
 #endif
+            
             _systems
                 .Inject(_sceneData)
+                .Inject(_storagesDataKeeperService)
                 .Init();
+        }
+
+        private void InitializeAssetsServices()
+        {
+            _assetsProviderService = new AssetProvider(_assetConfig);
+            _storagesDataKeeperService = new StoragesDataKeeperService(_assetsProviderService);
         }
 
         private void Update()
