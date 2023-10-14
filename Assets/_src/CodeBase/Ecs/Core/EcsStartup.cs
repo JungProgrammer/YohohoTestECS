@@ -48,6 +48,7 @@ namespace YohohoTest._src.CodeBase.Ecs.Core
                 .Add(new InitSpawnCameraDataSystem())
                 .Add(new InitPlantsSpawnerSystem())
                 .Add(new SetFollowCameraSystem())
+                .Add(new SpawnerItemsInitSystem())
                 .Add(new SpawnSystem())
                 .Add(new PlayerInputHandlerSystem())
                 .Add(new PlayerMovementSystem())
