@@ -37,6 +37,7 @@ namespace YohohoTest._src.CodeBase.Ecs.Core
             
             _systems
                 .Add(new InitSpawnPlayerDataSystem())
+                .Add(new SpawnSystem())
                 .Inject(_sceneData)
                 .Inject(_assetsProviderService)
                 .Inject(_storagesDataKeeperService)

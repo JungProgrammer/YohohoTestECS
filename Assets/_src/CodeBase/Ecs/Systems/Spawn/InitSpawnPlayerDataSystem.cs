@@ -18,7 +18,7 @@ namespace YohohoTest._src.CodeBase.Ecs.Systems.Spawn
             {
                 Prefab = _assetsProvider.GetPrefab(AssetPath.Hero),
                 Position = _sceneData.HeroSpawnPoint.position,
-                Rotation = Quaternion.identity,
+                Rotation = _assetsProvider.GetPrefab(AssetPath.Hero).transform.rotation,
                 Parent = null
             };
         }
