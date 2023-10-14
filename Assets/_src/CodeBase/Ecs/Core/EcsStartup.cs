@@ -1,5 +1,6 @@
 ﻿using Leopotam.Ecs;
 using UnityEngine;
+using YohohoTest._src.CodeBase.Ecs.Systems.Animations;
 using YohohoTest._src.CodeBase.Ecs.Systems.Input;
 using YohohoTest._src.CodeBase.Ecs.Systems.Movement;
 using YohohoTest._src.CodeBase.Ecs.Systems.Rotation;
@@ -50,6 +51,7 @@ namespace YohohoTest._src.CodeBase.Ecs.Core
                 .Add(new PlayerInputHandlerSystem())
                 .Add(new PlayerMovementSystem())
                 .Add(new PlayerRotationSystem())
+                .Add(new PlayerRunAnimatorSystem())
                 .Add(new MoveFollowsObjectsSystem())
                 .Inject(_staticData)
                 .Inject(_sceneData)
