@@ -1,5 +1,6 @@
 ﻿using Leopotam.Ecs;
 using UnityEngine;
+using YohohoTest._src.CodeBase.Ecs.Systems.Input;
 using YohohoTest._src.CodeBase.Ecs.Systems.Spawn;
 using YohohoTest._src.CodeBase.UnityComponents.AssetManagement;
 using YohohoTest._src.CodeBase.UnityComponents.AssetManagement.Storages;
@@ -38,6 +39,7 @@ namespace YohohoTest._src.CodeBase.Ecs.Core
             _systems
                 .Add(new InitSpawnPlayerDataSystem())
                 .Add(new SpawnSystem())
+                .Add(new PlayerInputHandlerSystem())
                 .Inject(_sceneData)
                 .Inject(_assetsProviderService)
                 .Inject(_storagesDataKeeperService)
