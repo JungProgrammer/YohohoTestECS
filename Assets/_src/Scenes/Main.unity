@@ -7871,6 +7871,7 @@ GameObject:
   - component: {fileID: 2145253372}
   - component: {fileID: 2146023388}
   - component: {fileID: 2147022108}
+  - component: {fileID: 2147022109}
   m_Layer: 0
   m_Name: CourierVehicle
   m_TagString: Untagged
@@ -7946,8 +7947,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2145020892}
   m_LocalRotation: {x: -0, y: -0.70710576, z: -0, w: 0.70710784}
-  m_LocalPosition: {x: 15.98, y: -0.006, z: 26.64}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 14.55, y: -0.006, z: 26.64}
+  m_LocalScale: {x: 1.5, y: 1, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2145253362}
@@ -8207,6 +8208,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &2147022109
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2145020892}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.4997482, y: 2.5374517, z: 7.0682716}
+  m_Center: {x: 0, y: 1.5467272, z: 0.13106346}
 --- !u!1 &1450880074341515148
 GameObject:
   m_ObjectHideFlags: 0
