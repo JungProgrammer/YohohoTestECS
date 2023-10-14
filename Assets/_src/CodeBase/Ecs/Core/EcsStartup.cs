@@ -1,8 +1,10 @@
 ﻿using Leopotam.Ecs;
 using UnityEngine;
+using YohohoTest._src.CodeBase.Ecs.Components.Events;
 using YohohoTest._src.CodeBase.Ecs.Systems.Animations;
 using YohohoTest._src.CodeBase.Ecs.Systems.Input;
 using YohohoTest._src.CodeBase.Ecs.Systems.Movement;
+using YohohoTest._src.CodeBase.Ecs.Systems.PlantsControlling;
 using YohohoTest._src.CodeBase.Ecs.Systems.Rotation;
 using YohohoTest._src.CodeBase.Ecs.Systems.Spawn;
 using YohohoTest._src.CodeBase.UnityComponents.AssetManagement;
@@ -55,6 +57,8 @@ namespace YohohoTest._src.CodeBase.Ecs.Core
                 .Add(new PlayerRotationSystem())
                 .Add(new PlayerRunAnimatorSystem())
                 .Add(new MoveFollowsObjectsSystem())
+                .Add(new PlantPullOutHandlerSystem())
+                .OneFrame<PlantPulledOutEvent>()
                 .Inject(_staticData)
                 .Inject(_sceneData)
                 .Inject(_assetsProviderService)

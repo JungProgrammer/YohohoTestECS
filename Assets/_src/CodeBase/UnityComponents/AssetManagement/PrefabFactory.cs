@@ -1,5 +1,6 @@
 using Leopotam.Ecs;
 using UnityEngine;
+using YohohoTest._src.CodeBase.Ecs.Components.Events;
 using YohohoTest._src.CodeBase.Ecs.Components.Objects;
 using YohohoTest._src.CodeBase.Ecs.Components.Spawn;
 using YohohoTest._src.CodeBase.UnityComponents.MonoLinks.Base;
@@ -24,7 +25,13 @@ namespace YohohoTest._src.CodeBase.UnityComponents.AssetManagement
             
             
             EcsEntity ecsEntity = _world.NewEntity();
-            ecsEntity.Get<SpawnerEntity>() = new SpawnerEntity(value: spawnData.SpawnerEntity);
+            if (!spawnData.SpawnerEntity.IsNull())
+            {
+                ecsEntity.Get<SpawnerEntity>() = new SpawnerEntity()
+                {
+                    Value = spawnData.SpawnerEntity
+                };
+            }
             monoEntity.Make(ref ecsEntity);
         }
     }
