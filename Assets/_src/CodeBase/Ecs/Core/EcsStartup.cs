@@ -1,6 +1,7 @@
 ﻿using Leopotam.Ecs;
 using UnityEngine;
 using YohohoTest._src.CodeBase.Ecs.Systems.Input;
+using YohohoTest._src.CodeBase.Ecs.Systems.Movement;
 using YohohoTest._src.CodeBase.Ecs.Systems.Spawn;
 using YohohoTest._src.CodeBase.UnityComponents.AssetManagement;
 using YohohoTest._src.CodeBase.UnityComponents.AssetManagement.Storages;
@@ -10,6 +11,10 @@ namespace YohohoTest._src.CodeBase.Ecs.Core
 {
     public class EcsStartup : MonoBehaviour
     {
+        [SerializeField] 
+        private StaticData _staticData;
+        
+        
         [SerializeField] 
         private SceneData _sceneData;
 
@@ -38,8 +43,11 @@ namespace YohohoTest._src.CodeBase.Ecs.Core
             
             _systems
                 .Add(new InitSpawnPlayerDataSystem())
+                .Add(new InitSpawnCameraDataSystem())
                 .Add(new SpawnSystem())
                 .Add(new PlayerInputHandlerSystem())
+                .Add(new PlayerMovementSystem())
+                .Inject(_staticData)
                 .Inject(_sceneData)
                 .Inject(_assetsProviderService)
                 .Inject(_storagesDataKeeperService)

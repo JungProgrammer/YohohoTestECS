@@ -21,7 +21,7 @@ namespace YohohoTest._src.CodeBase.Ecs.Systems.Input
             foreach (int index in _filter)
             {
                 ref MovementInputData movementInputData = ref _filter.Get2(index);
-                movementInputData.Direction = new Vector3(SimpleInput.GetAxis(Horizontal), SimpleInput.GetAxis(Vertical), 0);
+                movementInputData.Direction = new Vector3(SimpleInput.GetAxis(Horizontal), SimpleInput.GetAxis(Vertical), 0).normalized;
             }
         }
     }
