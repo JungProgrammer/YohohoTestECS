@@ -17,5 +17,5 @@ MonoBehaviour:
   CameraSpeed: 0.2
   CameraOffset: {x: 13.02, y: 17.43, z: 0}
   SpawnRateRange: {x: 6, y: 60}
-  BaseItemsFollowSpeed: 0.1
-  HandItemsHeightValue: 0.1
+  BaseItemsFollowSpeed: 0.01
+  HandItemsHeightValue: 0.2

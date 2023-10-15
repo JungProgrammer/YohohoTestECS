@@ -21,7 +21,7 @@ namespace YohohoTest._src.CodeBase.Ecs.Systems.Movement
 
                 gameObjectLink.Value.transform.position = Vector3.SmoothDamp(
                     gameObjectLink.Value.transform.position,
-                    followData.Target.position + _staticData.CameraOffset,
+                    followData.Target.position + followData.Offset,
                     ref followData.CurrentVelocity,
                     followData.Speed);
             }

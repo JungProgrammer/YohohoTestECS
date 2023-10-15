@@ -10,6 +10,7 @@ using YohohoTest._src.CodeBase.Ecs.Systems.Physic;
 using YohohoTest._src.CodeBase.Ecs.Systems.PlantsControlling;
 using YohohoTest._src.CodeBase.Ecs.Systems.Rotation;
 using YohohoTest._src.CodeBase.Ecs.Systems.Spawn;
+using YohohoTest._src.CodeBase.Ecs.Systems.StackControlling;
 using YohohoTest._src.CodeBase.UnityComponents.AssetManagement;
 using YohohoTest._src.CodeBase.UnityComponents.AssetManagement.Storages;
 using YohohoTest._src.CodeBase.UnityComponents.Data;
@@ -63,6 +64,7 @@ namespace YohohoTest._src.CodeBase.Ecs.Core
                 .Add(new PlantPullOutHandlerSystem())
                 .Add(new GrowSystem())
                 .Add(new SpawnerPlantHandItemsInitSystem())
+                .Add(new HandAddItemsToStackSystem())
                 .Add(new SetFollowHandItemsSystem())
                 .Add(new DeactivateColliderSystem())
                 .Add(new DestroyObjectsSystem())
