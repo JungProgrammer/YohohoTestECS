@@ -2,6 +2,7 @@
 using UnityEngine;
 using YohohoTest._src.CodeBase.UnityComponents.AssetManagement;
 using YohohoTest._src.CodeBase.UnityComponents.SpawnLogic;
+using YohohoTest._src.CodeBase.UnityComponents.UI;
 
 namespace YohohoTest._src.CodeBase.UnityComponents.Data
 {
@@ -17,10 +18,15 @@ namespace YohohoTest._src.CodeBase.UnityComponents.Data
         
         [SerializeField] 
         private List<ItemSpawnPoint> _plantsSpawnPoints;
+
+
+        [SerializeField] 
+        private HeadUpDisplay _headUpDisplay;
         
         
         public Transform HeroSpawnPoint => _heroSpawnPoint;
         public PrefabFactory PrefabFactory => _prefabFactory;
         public List<ItemSpawnPoint> PlantsSpawnPoints => _plantsSpawnPoints;
+        public HeadUpDisplay HeadUpDisplay => _headUpDisplay;
     }
 }

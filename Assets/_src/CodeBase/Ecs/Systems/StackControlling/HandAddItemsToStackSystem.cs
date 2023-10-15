@@ -1,4 +1,5 @@
 using Leopotam.Ecs;
+using YohohoTest._src.CodeBase.Ecs.Components.Events;
 using YohohoTest._src.CodeBase.Ecs.Components.Objects.Tags;
 using YohohoTest._src.CodeBase.Ecs.Components.StackLogic;
 
@@ -6,6 +7,8 @@ namespace YohohoTest._src.CodeBase.Ecs.Systems.StackControlling
 {
     public class HandAddItemsToStackSystem : IEcsRunSystem
     {
+        private EcsWorld _world;
+        
         private EcsFilter<HandItemTag, StackPlace> _itemsInsideStackFilter;
         private EcsFilter<HandItemTag>.Exclude<StackPlace, RemovedFromStackTag> _itemsOutsideStackFilter;
 
@@ -20,6 +23,8 @@ namespace YohohoTest._src.CodeBase.Ecs.Systems.StackControlling
                 {
                     PlaceIndex = newStackPlaceIndex
                 };
+
+                _world.NewEntity().Get<HandItemsCountChangedEvent>();
             }
         }
 

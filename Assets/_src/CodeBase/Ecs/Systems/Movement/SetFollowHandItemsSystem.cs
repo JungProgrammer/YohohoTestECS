@@ -32,7 +32,7 @@ namespace YohohoTest._src.CodeBase.Ecs.Systems.Movement
 
         private float CalculateDecreaseItemFollowCoefficient(StackPlace stackPlace)
         {
-            if (stackPlace.PlaceIndex < 8)
+            if (stackPlace.PlaceIndex < 3)
                 return 1;
             
             

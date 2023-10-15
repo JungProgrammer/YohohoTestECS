@@ -11,6 +11,7 @@ using YohohoTest._src.CodeBase.Ecs.Systems.PlantsControlling;
 using YohohoTest._src.CodeBase.Ecs.Systems.Rotation;
 using YohohoTest._src.CodeBase.Ecs.Systems.Spawn;
 using YohohoTest._src.CodeBase.Ecs.Systems.StackControlling;
+using YohohoTest._src.CodeBase.Ecs.Systems.UI;
 using YohohoTest._src.CodeBase.UnityComponents.AssetManagement;
 using YohohoTest._src.CodeBase.UnityComponents.AssetManagement.Storages;
 using YohohoTest._src.CodeBase.UnityComponents.Data;
@@ -48,6 +49,7 @@ namespace YohohoTest._src.CodeBase.Ecs.Core
             Leopotam.Ecs.UnityIntegration.EcsWorldObserver.Create(_world);
             Leopotam.Ecs.UnityIntegration.EcsSystemsObserver.Create(_systems);
 #endif
+            
             _systems
                 .Add(new InitSpawnPlayerDataSystem())
                 .Add(new InitSpawnCameraDataSystem())
@@ -69,9 +71,11 @@ namespace YohohoTest._src.CodeBase.Ecs.Core
                 .Add(new RotatingHandsItemsSystem())
                 .Add(new DeactivateColliderSystem())
                 .Add(new DestroyObjectsSystem())
+                .Add(new UpdateInventoryViewSystem())
                 .OneFrame<PlantPulledOutEvent>()
                 .OneFrame<OnTriggerEnterEvent>()
                 .OneFrame<DeactivateColliderEvent>()
+                .OneFrame<HandItemsCountChangedEvent>()
                 .OneFrame<DestroyEvent>()
                 .Inject(_staticData)
                 .Inject(_sceneData)
