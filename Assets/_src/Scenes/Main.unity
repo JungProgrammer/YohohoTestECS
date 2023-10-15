@@ -5469,8 +5469,68 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _heroSpawnPoint: {fileID: 616733933}
   _prefabFactory: {fileID: 1338987726}
-  _plantsSpawnPoints: []
-  _headUpDisplay: {fileID: 0}
+  _plantsSpawnPoints:
+  - {fileID: 841949318}
+  - {fileID: 1284968445}
+  - {fileID: 307500694}
+  - {fileID: 329517451}
+  - {fileID: 1845627023}
+  - {fileID: 980192821}
+  - {fileID: 189875207}
+  - {fileID: 1202151301}
+  - {fileID: 1465936730}
+  - {fileID: 359964445}
+  - {fileID: 1328570701}
+  - {fileID: 2090703200}
+  - {fileID: 1679083599}
+  - {fileID: 2056524129}
+  - {fileID: 990974449}
+  - {fileID: 565654735}
+  - {fileID: 1784584218}
+  - {fileID: 656202499}
+  - {fileID: 949245195}
+  - {fileID: 486210319}
+  - {fileID: 524961956}
+  - {fileID: 48479878}
+  - {fileID: 745604990}
+  - {fileID: 1256794951}
+  - {fileID: 295801514}
+  - {fileID: 1472143464}
+  - {fileID: 1533518657}
+  - {fileID: 2048143587}
+  - {fileID: 866040011}
+  - {fileID: 821527675}
+  - {fileID: 119856852}
+  - {fileID: 909110664}
+  - {fileID: 1793929456}
+  - {fileID: 718513891}
+  - {fileID: 38170512}
+  - {fileID: 346625789}
+  - {fileID: 2031566122}
+  - {fileID: 1935371477}
+  - {fileID: 1651409652}
+  - {fileID: 393168776}
+  - {fileID: 1489654155}
+  - {fileID: 1033209404}
+  - {fileID: 518878012}
+  - {fileID: 1150386019}
+  - {fileID: 145601261}
+  - {fileID: 573582706}
+  - {fileID: 1374780141}
+  - {fileID: 1095869477}
+  - {fileID: 261403747}
+  - {fileID: 851980124}
+  - {fileID: 906286742}
+  - {fileID: 1012812460}
+  - {fileID: 352652448}
+  - {fileID: 187825979}
+  - {fileID: 1401633664}
+  - {fileID: 273098404}
+  - {fileID: 1856897163}
+  - {fileID: 1803975836}
+  - {fileID: 772649030}
+  - {fileID: 1945222356}
+  _headUpDisplay: {fileID: 1707241464}
 --- !u!1 &1533518655
 GameObject:
   m_ObjectHideFlags: 0

@@ -147,6 +147,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c3b7f5e99744fb7abf4765646a94ece, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Value:
+    ItemType: 0
 --- !u!114 &4627336498050726382
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,7 +162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Value:
-    CurrentStage: 0
+    CurrentStage: -1
     DelayBetweenStages: 5
     CurrentDelayBetweenStages: 0
     StagesViews:
@@ -306,7 +308,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7747556111181019554
 Transform:
   m_ObjectHideFlags: 0
