@@ -2,6 +2,7 @@ using Leopotam.Ecs;
 using YohohoTest._src.CodeBase.Ecs.Components.Events;
 using YohohoTest._src.CodeBase.Ecs.Components.Objects;
 using YohohoTest._src.CodeBase.Ecs.Components.Objects.Tags;
+using YohohoTest._src.CodeBase.Ecs.Components.Objects.Tags.Plants;
 using YohohoTest._src.CodeBase.Ecs.Components.Spawn;
 
 namespace YohohoTest._src.CodeBase.Ecs.Systems.PlantsControlling

@@ -5,6 +5,7 @@ using YohohoTest._src.CodeBase.Ecs.Components.Events.Physic;
 using YohohoTest._src.CodeBase.Ecs.Systems.Animations;
 using YohohoTest._src.CodeBase.Ecs.Systems.Input;
 using YohohoTest._src.CodeBase.Ecs.Systems.Movement;
+using YohohoTest._src.CodeBase.Ecs.Systems.Physic;
 using YohohoTest._src.CodeBase.Ecs.Systems.PlantsControlling;
 using YohohoTest._src.CodeBase.Ecs.Systems.Rotation;
 using YohohoTest._src.CodeBase.Ecs.Systems.Spawn;
@@ -57,10 +58,13 @@ namespace YohohoTest._src.CodeBase.Ecs.Core
                 .Add(new PlayerRotationSystem())
                 .Add(new PlayerRunAnimatorSystem())
                 .Add(new MoveFollowsObjectsSystem())
+                .Add(new PullingOutPlantsSystem())
                 .Add(new PlantPullOutHandlerSystem())
                 .Add(new GrowSystem())
+                .Add(new DeactivateColliderSystem())
                 .OneFrame<PlantPulledOutEvent>()
                 .OneFrame<OnTriggerEnterEvent>()
+                .OneFrame<DeactivateColliderEvent>()
                 .Inject(_staticData)
                 .Inject(_sceneData)
                 .Inject(_assetsProviderService)

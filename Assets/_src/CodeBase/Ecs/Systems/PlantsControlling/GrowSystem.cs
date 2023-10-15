@@ -1,6 +1,7 @@
 using Leopotam.Ecs;
 using UnityEngine;
 using YohohoTest._src.CodeBase.Ecs.Components.Objects.Tags;
+using YohohoTest._src.CodeBase.Ecs.Components.Objects.Tags.Plants;
 using YohohoTest._src.CodeBase.Ecs.Components.PlantLogic;
 
 namespace YohohoTest._src.CodeBase.Ecs.Systems.PlantsControlling
