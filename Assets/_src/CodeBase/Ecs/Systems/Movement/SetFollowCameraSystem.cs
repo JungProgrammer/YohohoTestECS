@@ -8,7 +8,6 @@ namespace YohohoTest._src.CodeBase.Ecs.Systems.Movement
 {
     public class SetFollowCameraSystem : IEcsRunSystem
     {
-        private EcsWorld _world;
         private StaticData _staticData;
         
         private EcsFilter<PlayerTag, GameObjectLink> _playerFilter;

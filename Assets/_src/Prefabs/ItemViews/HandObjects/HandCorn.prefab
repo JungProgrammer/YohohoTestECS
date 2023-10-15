@@ -9,6 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6447891277303887540}
+  - component: {fileID: -4016814814083664770}
+  - component: {fileID: 6714544523825116428}
   m_Layer: 0
   m_Name: HandCorn
   m_TagString: Untagged
@@ -32,6 +34,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-4016814814083664770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6447891277303887543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f357f334ac154a82af13b23892eee314, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6714544523825116428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6447891277303887543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89770fb0ec14484c8be2757ccaa88138, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6447891277588855634
 GameObject:
   m_ObjectHideFlags: 0

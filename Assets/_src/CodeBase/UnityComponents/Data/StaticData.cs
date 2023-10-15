@@ -19,5 +19,11 @@ namespace YohohoTest._src.CodeBase.UnityComponents.Data
         [Space(20)]
         [Header("Plants")]
         public Vector2 SpawnRateRange;
+
+
+        [Space(20)] 
+        [Header("Stack items settings")]
+        public float BaseItemsFollowSpeed;
+        public float HandItemsHeightValue;
     }
 }

@@ -62,17 +62,18 @@ namespace YohohoTest._src.CodeBase.Ecs.Core
                 .Add(new PullingOutPlantsSystem())
                 .Add(new PlantPullOutHandlerSystem())
                 .Add(new GrowSystem())
+                .Add(new SetFollowHandItemsSystem())
                 .Add(new DeactivateColliderSystem())
                 .Add(new DestroyObjectsSystem())
                 .OneFrame<PlantPulledOutEvent>()
                 .OneFrame<OnTriggerEnterEvent>()
                 .OneFrame<DeactivateColliderEvent>()
+                .OneFrame<DestroyEvent>()
                 .Inject(_staticData)
                 .Inject(_sceneData)
                 .Inject(_assetsProviderService)
                 .Inject(_storagesDataKeeperService)
                 .Init();
-
         }
 
         private void InitializeAssetsServices()
