@@ -2,6 +2,7 @@ using Leopotam.Ecs;
 using UnityEngine;
 using YohohoTest._src.CodeBase.Ecs.Components.Events;
 using YohohoTest._src.CodeBase.Ecs.Components.Movement;
+using YohohoTest._src.CodeBase.Ecs.Components.Objects;
 using YohohoTest._src.CodeBase.Ecs.Components.Objects.Tags;
 using YohohoTest._src.CodeBase.Ecs.Components.StackLogic;
 
@@ -34,6 +35,10 @@ namespace YohohoTest._src.CodeBase.Ecs.Systems.StackControlling
                 EcsEntity topItem = GetTopItemFromStack();
                 topItem.Del<FollowData>();
                 topItem.Get<RemovedFromStackTag>() = new RemovedFromStackTag();
+                topItem.Get<MoveToStockData>() = new MoveToStockData()
+                {
+                    StockPoint = stackRemovingToStock.StockEntity.Get<StockPoint>()
+                };
 
                 _world.NewEntity().Get<HandItemsCountChangedEvent>();
             }

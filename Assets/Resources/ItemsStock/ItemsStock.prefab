@@ -87,6 +87,37 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &630088780431755146
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 513379271714315628}
+  m_Layer: 0
+  m_Name: StockPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &513379271714315628
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 630088780431755146}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: 1.32, z: 1.782}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8552630168433774027}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5414507797306071517
 GameObject:
   m_ObjectHideFlags: 0
@@ -507,6 +538,7 @@ GameObject:
   - component: {fileID: 8552630168433774027}
   - component: {fileID: 7972108978579682053}
   - component: {fileID: 3966341843787309751}
+  - component: {fileID: 5246732877453174658}
   - component: {fileID: 6426653447370305400}
   - component: {fileID: 2541794347631174011}
   - component: {fileID: 8552630168436199210}
@@ -531,6 +563,7 @@ Transform:
   m_Children:
   - {fileID: 3256607478692268763}
   - {fileID: 6742341643968432357}
+  - {fileID: 513379271714315628}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
@@ -561,6 +594,20 @@ MonoBehaviour:
   Value:
     ItemType: 0
     CollectItemsDelay: 0.08
+--- !u!114 &5246732877453174658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8552630168434201067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d54057517c0948a3aee704f067b8efe5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Value:
+    Value: {fileID: 513379271714315628}
 --- !u!114 &6426653447370305400
 MonoBehaviour:
   m_ObjectHideFlags: 0

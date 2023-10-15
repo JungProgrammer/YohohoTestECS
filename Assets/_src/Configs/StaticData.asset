@@ -19,3 +19,4 @@ MonoBehaviour:
   SpawnRateRange: {x: 6, y: 7}
   BaseItemsFollowSpeed: 0.01
   HandItemsHeightValue: 0.3
+  MovementSpeedItemsForMoveToStocks: 5

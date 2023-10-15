@@ -25,5 +25,10 @@ namespace YohohoTest._src.CodeBase.UnityComponents.Data
         [Header("Stack items settings")]
         public float BaseItemsFollowSpeed;
         public float HandItemsHeightValue;
+
+
+        [Space(20)] 
+        [Header("Stocks settings")]
+        public float MovementSpeedItemsForMoveToStocks;
     }
 }
