@@ -9,7 +9,7 @@ namespace YohohoTest._src.CodeBase.Ecs.Systems.StackControlling
     {
         private EcsWorld _world;
         
-        private EcsFilter<HandItemTag, StackPlace> _itemsInsideStackFilter;
+        private EcsFilter<HandItemTag, StackPlace>.Exclude<RemovedFromStackTag> _itemsInsideStackFilter;
         private EcsFilter<HandItemTag>.Exclude<StackPlace, RemovedFromStackTag> _itemsOutsideStackFilter;
 
 

@@ -73,6 +73,7 @@ namespace YohohoTest._src.CodeBase.Ecs.Core
                 .Add(new PlayerCarrierAnimatorSystem())
                 .Add(new HandleStartRemovingItemsFromStackSystem())
                 .Add(new HandleStopRemovingItemsFromStackSystem())
+                .Add(new HandleRemoveItemsFromStackSystem())
                 .Add(new DeactivateColliderSystem())
                 .Add(new DestroyObjectsSystem())
                 .Add(new UpdateInventoryViewSystem())

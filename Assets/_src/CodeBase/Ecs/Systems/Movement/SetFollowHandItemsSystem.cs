@@ -11,7 +11,7 @@ namespace YohohoTest._src.CodeBase.Ecs.Systems.Movement
     {
         private StaticData _staticData;
         
-        private EcsFilter<HandItemTag, StackPlace>.Exclude<FollowData> _itemsFilter;
+        private EcsFilter<HandItemTag, StackPlace>.Exclude<FollowData, RemovedFromStackTag> _itemsFilter;
         private EcsFilter<PlayerTag, StackTag> _playerTag;
 
         public void Run()

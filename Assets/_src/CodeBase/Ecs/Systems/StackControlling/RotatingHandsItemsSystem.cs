@@ -9,7 +9,7 @@ namespace YohohoTest._src.CodeBase.Ecs.Systems.StackControlling
     public class RotatingHandsItemsSystem : IEcsRunSystem
     {
         private EcsFilter<StackTag, GameObjectLink> _stackFilter;
-        private EcsFilter<HandItemTag, GameObjectLink, StackPlace> _itemsFilter;
+        private EcsFilter<HandItemTag, GameObjectLink, StackPlace>.Exclude<RemovedFromStackTag> _itemsFilter;
 
         public void Run()
         {
