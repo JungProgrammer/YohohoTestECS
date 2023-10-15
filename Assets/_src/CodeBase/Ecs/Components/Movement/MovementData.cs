@@ -7,5 +7,6 @@ namespace YohohoTest._src.CodeBase.Ecs.Components.Movement
         public Transform MovementTransform;
         public Vector3 TargetPosition;
         public float MovementSpeed;
+        public float MaxOffsetDistance;
     }
 }

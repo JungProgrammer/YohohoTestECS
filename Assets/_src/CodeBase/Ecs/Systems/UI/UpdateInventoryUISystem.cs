@@ -6,7 +6,7 @@ using YohohoTest._src.CodeBase.UnityComponents.Data;
 
 namespace YohohoTest._src.CodeBase.Ecs.Systems.UI
 {
-    public class UpdateInventoryViewSystem : IEcsRunSystem
+    public class UpdateInventoryUISystem : IEcsRunSystem
     {
         private SceneData _sceneData;
         

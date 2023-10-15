@@ -6,7 +6,7 @@ using YohohoTest._src.CodeBase.UnityComponents.Data;
 
 namespace YohohoTest._src.CodeBase.Ecs.Systems.Movement
 {
-    public class SetMoveHandeItemsToStockPoint : IEcsRunSystem
+    public class SetMoveHandeItemsToStockPointSystem : IEcsRunSystem
     {
         private StaticData _staticData;
         
@@ -21,7 +21,8 @@ namespace YohohoTest._src.CodeBase.Ecs.Systems.Movement
                 {
                     MovementTransform = _filter.Get2(index).Value.transform,
                     TargetPosition = _filter.Get3(index).StockPoint.Value.position,
-                    MovementSpeed = _staticData.MovementSpeedItemsForMoveToStocks
+                    MovementSpeed = _staticData.MovementSpeedItemsForMoveToStocks,
+                    MaxOffsetDistance = .2f
                 };
 
                 itemEntity.Del<MoveToStockData>();
