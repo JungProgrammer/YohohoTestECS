@@ -5,5 +5,6 @@ namespace YohohoTest._src.CodeBase.UnityComponents.AssetManagement.Storages
     public interface IStoragesDataKeeperService
     {
         public ItemViewsDataStorage ItemViewsDataStorage { get; }
+        public HandObjectsViewsDataStorage HandObjectsViewsDataStorage { get; }
     }
 }
