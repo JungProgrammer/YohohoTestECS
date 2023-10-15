@@ -475,7 +475,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Value:
     ItemType: 0
-    CollectItemsDelay: 0.08
+    CollectItemsDelay: 0.05
 --- !u!114 &1002939279219391952
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -638,7 +638,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5586014250046184920}
   m_LocalRotation: {x: -0, y: -0.7071075, z: -0, w: 0.7071061}
-  m_LocalPosition: {x: 0.773, y: 1.32, z: 1.782}
+  m_LocalPosition: {x: 0.77, y: 1.144, z: 1.97}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
