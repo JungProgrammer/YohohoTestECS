@@ -12,6 +12,8 @@ using YohohoTest._src.CodeBase.Ecs.Systems.Rotation;
 using YohohoTest._src.CodeBase.Ecs.Systems.Spawn;
 using YohohoTest._src.CodeBase.Ecs.Systems.StackControlling;
 using YohohoTest._src.CodeBase.Ecs.Systems.UI;
+using YohohoTest._src.CodeBase.Ecs.Systems.Vibrations;
+using YohohoTest._src.CodeBase.Services.Vibration;
 using YohohoTest._src.CodeBase.UnityComponents.AssetManagement;
 using YohohoTest._src.CodeBase.UnityComponents.AssetManagement.Storages;
 using YohohoTest._src.CodeBase.UnityComponents.Data;
@@ -37,6 +39,7 @@ namespace YohohoTest._src.CodeBase.Ecs.Core
 
         private IAssetsProvider _assetsProviderService;
         private IStoragesDataKeeperService _storagesDataKeeperService;
+        private IVibrationService _vibrationService;
 
         private void Start()
         {
@@ -44,6 +47,7 @@ namespace YohohoTest._src.CodeBase.Ecs.Core
             _systems = new EcsSystems(_world);
 
             InitializeAssetsServices();
+            InitializeVibrationService();
 
 #if UNITY_EDITOR
             Leopotam.Ecs.UnityIntegration.EcsWorldObserver.Create(_world);
@@ -79,6 +83,7 @@ namespace YohohoTest._src.CodeBase.Ecs.Core
                 .Add(new DeactivateColliderSystem())
                 .Add(new DestroyObjectsSystem())
                 .Add(new UpdateInventoryUISystem())
+                .Add(new VibrationActivatorOnInventoryChangedSystem())
                 .OneFrame<PlantPulledOutEvent>()
                 .OneFrame<OnTriggerEnterEvent>()
                 .OneFrame<OnTriggerExitEvent>()
@@ -89,6 +94,7 @@ namespace YohohoTest._src.CodeBase.Ecs.Core
                 .Inject(_sceneData)
                 .Inject(_assetsProviderService)
                 .Inject(_storagesDataKeeperService)
+                .Inject(_vibrationService)
                 .Init();
         }
 
@@ -97,6 +103,9 @@ namespace YohohoTest._src.CodeBase.Ecs.Core
             _assetsProviderService = new AssetProvider(_assetConfig);
             _storagesDataKeeperService = new StoragesDataKeeperService(_assetsProviderService);
         }
+
+        private void InitializeVibrationService() => 
+            _vibrationService = new VibrationService();
 
         private void Update()
         {

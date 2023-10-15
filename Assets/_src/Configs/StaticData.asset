@@ -16,7 +16,7 @@ MonoBehaviour:
   HeroRotationSpeed: 6
   CameraSpeed: 0.2
   CameraOffset: {x: 15, y: 19, z: 0}
-  SpawnRateRange: {x: 6, y: 7}
+  SpawnRateRange: {x: 6, y: 40}
   BaseItemsFollowSpeed: 0.01
   HandItemsHeightValue: 0.3
   MovementSpeedItemsForMoveToStocks: 15
