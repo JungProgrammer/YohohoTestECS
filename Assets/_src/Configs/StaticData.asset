@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b650f81f25341ca80417ed1acc00e6a, type: 3}
   m_Name: StaticData
   m_EditorClassIdentifier: 
-  HeroMovementSpeed: 8
+  HeroMovementSpeed: 12
   HeroRotationSpeed: 6
   CameraSpeed: 0.2
   CameraOffset: {x: 20.8, y: 26, z: 0}
