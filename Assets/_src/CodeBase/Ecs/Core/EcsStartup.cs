@@ -3,6 +3,7 @@ using UnityEngine;
 using YohohoTest._src.CodeBase.Ecs.Components.Events;
 using YohohoTest._src.CodeBase.Ecs.Components.Events.Physic;
 using YohohoTest._src.CodeBase.Ecs.Systems.Animations;
+using YohohoTest._src.CodeBase.Ecs.Systems.DestroyControlling;
 using YohohoTest._src.CodeBase.Ecs.Systems.Input;
 using YohohoTest._src.CodeBase.Ecs.Systems.Movement;
 using YohohoTest._src.CodeBase.Ecs.Systems.Physic;
@@ -62,6 +63,7 @@ namespace YohohoTest._src.CodeBase.Ecs.Core
                 .Add(new PlantPullOutHandlerSystem())
                 .Add(new GrowSystem())
                 .Add(new DeactivateColliderSystem())
+                .Add(new DestroyObjectsSystem())
                 .OneFrame<PlantPulledOutEvent>()
                 .OneFrame<OnTriggerEnterEvent>()
                 .OneFrame<DeactivateColliderEvent>()

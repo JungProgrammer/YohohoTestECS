@@ -23,6 +23,7 @@ namespace YohohoTest._src.CodeBase.Ecs.Systems.PlantsControlling
                 EcsEntity plant = _filter.GetEntity(index);
                 plant.Get<PlantPulledOutEvent>() = new PlantPulledOutEvent();
                 plant.Get<DeactivateColliderEvent>() = new DeactivateColliderEvent();
+                plant.Get<DestroyEvent>() = new DestroyEvent();
             }
         }
     }
