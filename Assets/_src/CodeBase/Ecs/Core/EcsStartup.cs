@@ -66,6 +66,7 @@ namespace YohohoTest._src.CodeBase.Ecs.Core
                 .Add(new SpawnerPlantHandItemsInitSystem())
                 .Add(new HandAddItemsToStackSystem())
                 .Add(new SetFollowHandItemsSystem())
+                .Add(new RotatingHandsItemsSystem())
                 .Add(new DeactivateColliderSystem())
                 .Add(new DestroyObjectsSystem())
                 .OneFrame<PlantPulledOutEvent>()

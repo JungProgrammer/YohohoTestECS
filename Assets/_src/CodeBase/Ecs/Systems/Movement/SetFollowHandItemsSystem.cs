@@ -30,7 +30,13 @@ namespace YohohoTest._src.CodeBase.Ecs.Systems.Movement
             }
         }
 
-        private float CalculateDecreaseItemFollowCoefficient(StackPlace stackPlace) => 
-            1 + (stackPlace.PlaceIndex + 1) / 3;
+        private float CalculateDecreaseItemFollowCoefficient(StackPlace stackPlace)
+        {
+            if (stackPlace.PlaceIndex < 8)
+                return 1;
+            
+            
+            return 1 + (stackPlace.PlaceIndex + 1) / 3;
+        } 
     }
 }
