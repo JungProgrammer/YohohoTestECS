@@ -5,7 +5,7 @@ using YohohoTest._src.CodeBase.Ecs.Components.StackLogic;
 
 namespace YohohoTest._src.CodeBase.Ecs.Systems.StackControlling
 {
-    public class HandAddItemsToStackSystem : IEcsRunSystem
+    public class HandleAddItemsToStackSystem : IEcsRunSystem
     {
         private EcsWorld _world;
         

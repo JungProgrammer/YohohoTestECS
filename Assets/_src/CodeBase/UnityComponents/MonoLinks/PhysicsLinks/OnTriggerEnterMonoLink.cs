@@ -3,7 +3,7 @@ using UnityEngine;
 using YohohoTest._src.CodeBase.Ecs.Components.Events.Physic;
 using YohohoTest._src.CodeBase.UnityComponents.MonoLinks.Base;
 
-namespace UnityComponents.MonoLinks.PhysicsLinks
+namespace YohohoTest._src.CodeBase.UnityComponents.MonoLinks.PhysicsLinks
 {
 	public class OnTriggerEnterMonoLink : PhysicsLinkBase
 	{
