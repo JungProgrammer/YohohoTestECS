@@ -35,9 +35,9 @@ namespace YohohoTest._src.CodeBase.Ecs.Systems.StackControlling
                 EcsEntity topItem = GetTopItemFromStack();
                 topItem.Del<FollowData>();
                 topItem.Get<RemovedFromStackTag>() = new RemovedFromStackTag();
-                topItem.Get<MoveToStockData>() = new MoveToStockData()
+                topItem.Get<ItemReadyToStockMoveEvent>() = new ItemReadyToStockMoveEvent()
                 {
-                    StockPoint = stackRemovingToStock.StockEntity.Get<StockPoint>()
+                    StockEntity = stackRemovingToStock.StockEntity
                 };
 
                 _world.NewEntity().Get<HandItemsCountChangedEvent>();

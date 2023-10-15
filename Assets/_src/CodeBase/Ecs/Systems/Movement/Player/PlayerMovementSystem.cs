@@ -5,7 +5,7 @@ using YohohoTest._src.CodeBase.Ecs.Components.Objects.Tags;
 using YohohoTest._src.CodeBase.Ecs.Components.PlayerInput;
 using YohohoTest._src.CodeBase.UnityComponents.Data;
 
-namespace YohohoTest._src.CodeBase.Ecs.Systems.Movement
+namespace YohohoTest._src.CodeBase.Ecs.Systems.Movement.Player
 {
     public class PlayerMovementSystem : IEcsRunSystem
     {

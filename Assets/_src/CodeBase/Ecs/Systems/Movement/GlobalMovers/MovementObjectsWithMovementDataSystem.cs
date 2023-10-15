@@ -2,7 +2,7 @@ using Leopotam.Ecs;
 using UnityEngine;
 using YohohoTest._src.CodeBase.Ecs.Components.Movement;
 
-namespace YohohoTest._src.CodeBase.Ecs.Systems.Movement
+namespace YohohoTest._src.CodeBase.Ecs.Systems.Movement.GlobalMovers
 {
     public class MovementObjectsWithMovementDataSystem : IEcsRunSystem
     {

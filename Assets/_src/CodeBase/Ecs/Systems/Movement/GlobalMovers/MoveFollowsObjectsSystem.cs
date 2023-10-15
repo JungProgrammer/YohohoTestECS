@@ -4,7 +4,7 @@ using YohohoTest._src.CodeBase.Ecs.Components.Links;
 using YohohoTest._src.CodeBase.Ecs.Components.Movement;
 using YohohoTest._src.CodeBase.UnityComponents.Data;
 
-namespace YohohoTest._src.CodeBase.Ecs.Systems.Movement
+namespace YohohoTest._src.CodeBase.Ecs.Systems.Movement.GlobalMovers
 {
     public class MoveFollowsObjectsSystem : IEcsRunSystem
     {

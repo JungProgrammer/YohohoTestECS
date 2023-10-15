@@ -6,11 +6,14 @@ using YohohoTest._src.CodeBase.Ecs.Systems.Animations;
 using YohohoTest._src.CodeBase.Ecs.Systems.DestroyControlling;
 using YohohoTest._src.CodeBase.Ecs.Systems.Input;
 using YohohoTest._src.CodeBase.Ecs.Systems.Movement;
+using YohohoTest._src.CodeBase.Ecs.Systems.Movement.GlobalMovers;
+using YohohoTest._src.CodeBase.Ecs.Systems.Movement.Player;
 using YohohoTest._src.CodeBase.Ecs.Systems.Physic;
 using YohohoTest._src.CodeBase.Ecs.Systems.PlantsControlling;
 using YohohoTest._src.CodeBase.Ecs.Systems.Rotation;
 using YohohoTest._src.CodeBase.Ecs.Systems.Spawn;
 using YohohoTest._src.CodeBase.Ecs.Systems.StackControlling;
+using YohohoTest._src.CodeBase.Ecs.Systems.StockLogic;
 using YohohoTest._src.CodeBase.Ecs.Systems.UI;
 using YohohoTest._src.CodeBase.Ecs.Systems.Vibrations;
 using YohohoTest._src.CodeBase.Services.Vibration;
@@ -76,6 +79,7 @@ namespace YohohoTest._src.CodeBase.Ecs.Core
                 .Add(new HandleStartRemovingItemsFromStackSystem())
                 .Add(new HandleStopRemovingItemsFromStackSystem())
                 .Add(new HandleRemoveItemsFromStackSystem())
+                .Add(new SetStockPlaceForItemsSystem())
                 .Add(new SetMoveHandeItemsToStockPointSystem())
                 .Add(new MovementObjectsWithMovementDataSystem())
                 .Add(new PlayerRunAnimatorSystem())
@@ -89,6 +93,7 @@ namespace YohohoTest._src.CodeBase.Ecs.Core
                 .OneFrame<OnTriggerExitEvent>()
                 .OneFrame<DeactivateColliderEvent>()
                 .OneFrame<HandItemsCountChangedEvent>()
+                .OneFrame<ItemReadyToStockMoveEvent>()
                 .OneFrame<DestroyEvent>()
                 .Inject(_staticData)
                 .Inject(_sceneData)
