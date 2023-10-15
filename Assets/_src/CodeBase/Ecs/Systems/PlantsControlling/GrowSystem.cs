@@ -1,6 +1,6 @@
 using Leopotam.Ecs;
 using UnityEngine;
-using YohohoTest._src.CodeBase.Ecs.Components.Objects.Tags;
+using YohohoTest._src.CodeBase.Ecs.Components.Events;
 using YohohoTest._src.CodeBase.Ecs.Components.Objects.Tags.Plants;
 using YohohoTest._src.CodeBase.Ecs.Components.PlantLogic;
 
@@ -8,6 +8,7 @@ namespace YohohoTest._src.CodeBase.Ecs.Systems.PlantsControlling
 {
     public class GrowSystem : IEcsRunSystem
     {
+        private EcsWorld _world;
         private EcsFilter<GrowStagesLink>.Exclude<GrowCompletedTag> _filter;
 
         public void Run()
@@ -25,6 +26,11 @@ namespace YohohoTest._src.CodeBase.Ecs.Systems.PlantsControlling
                 
                 IncreaseStageIndex(ref growStagesLink);
                 ActivateSecondStageView(ref growStagesLink);
+
+                _world.NewEntity().Get<PlantChangedStageEvent>() = new PlantChangedStageEvent()
+                {
+                    PlantEntity = _filter.GetEntity(index)
+                };
 
                 if (growStagesLink.CurrentStage == growStagesLink.StagesViews.Count - 1)
                     _filter.GetEntity(index).Get<GrowCompletedTag>() = new GrowCompletedTag();
