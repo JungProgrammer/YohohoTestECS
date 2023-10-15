@@ -36,7 +36,7 @@ namespace YohohoTest._src.CodeBase.Ecs.Systems.Movement
                 return 1;
             
             
-            return 1 + (stackPlace.PlaceIndex + 1) / 3;
+            return 1 + (stackPlace.PlaceIndex + 1) / 2;
         } 
     }
 }

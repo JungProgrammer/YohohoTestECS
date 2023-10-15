@@ -22,7 +22,7 @@ namespace YohohoTest._src.CodeBase.Ecs.Systems.Movement
                     MovementTransform = _filter.Get2(index).Value.transform,
                     TargetPosition = _filter.Get3(index).StockPoint.Value.position,
                     MovementSpeed = _staticData.MovementSpeedItemsForMoveToStocks,
-                    MaxOffsetDistance = .2f
+                    MaxOffsetDistance = .5f
                 };
 
                 itemEntity.Del<MoveToStockData>();
