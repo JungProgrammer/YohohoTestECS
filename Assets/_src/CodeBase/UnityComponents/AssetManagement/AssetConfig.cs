@@ -7,5 +7,6 @@ namespace YohohoTest._src.CodeBase.UnityComponents.AssetManagement
     public class AssetConfig : ScriptableObject
     {
         public ItemViewsDataCollection ItemViewsDataCollection;
+        public HandObjectsDataCollection HandObjectsDataCollection;
     }
 }

@@ -9,6 +9,7 @@ namespace YohohoTest._src.CodeBase.UnityComponents.AssetManagement
 
 
         public ItemViewsDataCollection ItemViewsDataCollection => _assetConfig.ItemViewsDataCollection;
+        public HandObjectsDataCollection HandObjectsViewsDataCollection => _assetConfig.HandObjectsDataCollection;
 
         public AssetProvider(AssetConfig assetConfig)
         {

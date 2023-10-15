@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ItemViewsDataCollection: {fileID: 11400000, guid: bcd10686c71d4f54d8fc3c956e84dc44,
     type: 2}
+  HandObjectsDataCollection: {fileID: 11400000, guid: c849942391b684d01be386305e87cc71,
+    type: 2}
