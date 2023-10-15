@@ -10,7 +10,7 @@ namespace YohohoTest._src.CodeBase.Ecs.Systems.UI
     {
         private SceneData _sceneData;
         
-        private EcsFilter<HandItemTag, StackPlace> _stackFilter;
+        private EcsFilter<HandItemTag, StackPlace>.Exclude<RemovedFromStackTag> _stackFilter;
         private EcsFilter<HandItemsCountChangedEvent> _eventFilter;
             
         public void Run()

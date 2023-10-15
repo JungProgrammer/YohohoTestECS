@@ -12,7 +12,7 @@ namespace YohohoTest._src.CodeBase.Ecs.Systems.Animations
         private static int Carrying = Animator.StringToHash("Carrying");
 
         private EcsFilter<PlayerTag, AnimatorLink> _playerFilter;
-        private EcsFilter<HandItemTag, StackPlace> _stackFilter;
+        private EcsFilter<HandItemTag, StackPlace>.Exclude<RemovedFromStackTag> _stackFilter;
         private EcsFilter<HandItemsCountChangedEvent> _eventFilter;
 
 

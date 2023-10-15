@@ -1,5 +1,6 @@
 using Leopotam.Ecs;
 using UnityEngine;
+using YohohoTest._src.CodeBase.Ecs.Components.Events;
 using YohohoTest._src.CodeBase.Ecs.Components.Movement;
 using YohohoTest._src.CodeBase.Ecs.Components.Objects.Tags;
 using YohohoTest._src.CodeBase.Ecs.Components.StackLogic;
@@ -8,6 +9,8 @@ namespace YohohoTest._src.CodeBase.Ecs.Systems.StackControlling
 {
     public class HandleRemoveItemsFromStackSystem : IEcsRunSystem
     {
+        private EcsWorld _world;
+        
         private EcsFilter<StackRemovingToStock> _removeFilter;
         private EcsFilter<HandItemTag, StackPlace>.Exclude<RemovedFromStackTag> _itemsInsideStackFilter;
 
@@ -31,6 +34,8 @@ namespace YohohoTest._src.CodeBase.Ecs.Systems.StackControlling
                 EcsEntity topItem = GetTopItemFromStack();
                 topItem.Del<FollowData>();
                 topItem.Get<RemovedFromStackTag>() = new RemovedFromStackTag();
+
+                _world.NewEntity().Get<HandItemsCountChangedEvent>();
             }
         }
 
