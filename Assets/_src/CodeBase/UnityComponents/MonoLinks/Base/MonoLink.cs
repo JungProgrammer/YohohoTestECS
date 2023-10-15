@@ -9,9 +9,9 @@ namespace YohohoTest._src.CodeBase.UnityComponents.MonoLinks.Base
 		public override void Make(ref EcsEntity entity)
 		{
 			if (entity.Has<T>())
-			{
 				return;
-			}
+			
+			
 			entity.Get<T>() = Value;
 		}
 	}

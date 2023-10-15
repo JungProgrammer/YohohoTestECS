@@ -1,6 +1,7 @@
 ﻿using Leopotam.Ecs;
 using UnityEngine;
 using YohohoTest._src.CodeBase.Ecs.Components.Events;
+using YohohoTest._src.CodeBase.Ecs.Components.Events.Physic;
 using YohohoTest._src.CodeBase.Ecs.Systems.Animations;
 using YohohoTest._src.CodeBase.Ecs.Systems.Input;
 using YohohoTest._src.CodeBase.Ecs.Systems.Movement;
@@ -59,6 +60,7 @@ namespace YohohoTest._src.CodeBase.Ecs.Core
                 .Add(new PlantPullOutHandlerSystem())
                 .Add(new GrowSystem())
                 .OneFrame<PlantPulledOutEvent>()
+                .OneFrame<OnTriggerEnterEvent>()
                 .Inject(_staticData)
                 .Inject(_sceneData)
                 .Inject(_assetsProviderService)
