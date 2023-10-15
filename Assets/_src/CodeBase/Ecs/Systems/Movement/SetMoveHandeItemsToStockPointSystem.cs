@@ -26,11 +26,24 @@ namespace YohohoTest._src.CodeBase.Ecs.Systems.Movement
                 itemEntity.Get<MovementData>() = new MovementData()
                 {
                     MovementTransform = _filter.Get2(index).Value.transform,
-                    TargetPosition = stockEntity.Get<StockPoint>().Value.position + _filter.Get3(index).PlaceIndex * _staticData.HandItemsHeightValue * Vector3.up,
+                    TargetPosition = CalculateTargetPosition(stockEntity, index),
                     MovementSpeed = _staticData.MovementSpeedItemsForMoveToStocks,
                     MaxOffsetDistance = .5f
                 };
             }
+        }
+
+        private Vector3 CalculateTargetPosition(EcsEntity stockEntity, int index)
+        {
+            StockPoint stockPoint = stockEntity.Get<StockPoint>();
+            int placeIndex = _filter.Get3(index).PlaceIndex;
+            
+            Vector3 targetPosition = stockPoint.Point.position;
+            Vector3 forwardDeltaVector = placeIndex % stockPoint.NumbersOfItemsAtRow * stockPoint.DistanceBetweenItems * stockPoint.Point.forward;
+            Vector3 upDeltaVector = placeIndex / stockPoint.NumbersOfItemsAtRow * _staticData.HandItemsHeightValue * stockPoint.Point.up;
+            targetPosition += forwardDeltaVector + upDeltaVector;
+
+            return targetPosition;
         }
     }
 }

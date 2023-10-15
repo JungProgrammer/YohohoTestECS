@@ -29,6 +29,7 @@ namespace YohohoTest._src.CodeBase.UnityComponents.Data
 
         [Space(20)] 
         [Header("Stocks settings")]
+        public float RotationItemsTimeAfterSetToStocks;
         public float MovementSpeedItemsForMoveToStocks;
     }
 }

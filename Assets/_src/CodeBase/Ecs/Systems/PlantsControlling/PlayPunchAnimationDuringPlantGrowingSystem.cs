@@ -3,6 +3,7 @@ using Leopotam.Ecs;
 using UnityEngine;
 using YohohoTest._src.CodeBase.Ecs.Components.Events;
 using YohohoTest._src.CodeBase.Ecs.Components.Links;
+using YohohoTest._src.CodeBase.UnityComponents.Data;
 
 namespace YohohoTest._src.CodeBase.Ecs.Systems.PlantsControlling
 {
@@ -23,7 +24,7 @@ namespace YohohoTest._src.CodeBase.Ecs.Systems.PlantsControlling
         private static void PlayPunchAnimation(GameObjectLink plantGameObjectLink)
         {
             DOTween.Kill(plantGameObjectLink.Value.transform);
-            plantGameObjectLink.Value.transform.DOPunchScale(Vector3.one, .3f, 4);
+            plantGameObjectLink.Value.transform.DOPunchScale(Vector3.one * .7f, .3f, 4);
         }
     }
 }

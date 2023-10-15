@@ -79,6 +79,7 @@ namespace YohohoTest._src.CodeBase.Ecs.Core
                 .Add(new HandleStartRemovingItemsFromStackSystem())
                 .Add(new HandleStopRemovingItemsFromStackSystem())
                 .Add(new HandleRemoveItemsFromStackSystem())
+                .Add(new SetRotationStockItemsSystem())
                 .Add(new SetStockPlaceForItemsSystem())
                 .Add(new SetMoveHandeItemsToStockPointSystem())
                 .Add(new MovementObjectsWithMovementDataSystem())

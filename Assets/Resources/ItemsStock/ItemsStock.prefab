@@ -489,7 +489,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Value:
-    Value: {fileID: 4766188908227151678}
+    Point: {fileID: 4766188908227151678}
+    NumbersOfItemsAtRow: 5
+    DistanceBetweenItems: 0.7
 --- !u!114 &2020721466551973162
 MonoBehaviour:
   m_ObjectHideFlags: 0
