@@ -62,7 +62,7 @@ namespace YohohoTest._src.CodeBase.Ecs.Core
                 .Add(new PullingOutPlantsSystem())
                 .Add(new PlantPullOutHandlerSystem())
                 .Add(new GrowSystem())
-                .Add(new SpawnPlantHandItemsSystem())
+                .Add(new SpawnerPlantHandItemsInitSystem())
                 .Add(new SetFollowHandItemsSystem())
                 .Add(new DeactivateColliderSystem())
                 .Add(new DestroyObjectsSystem())

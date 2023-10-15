@@ -8,7 +8,7 @@ using YohohoTest._src.CodeBase.UnityComponents.AssetManagement.Storages;
 
 namespace YohohoTest._src.CodeBase.Ecs.Systems.Spawn
 {
-    public class SpawnPlantHandItemsSystem : IEcsRunSystem
+    public class SpawnerPlantHandItemsInitSystem : IEcsRunSystem
     {
         private EcsWorld _world;
         private IStoragesDataKeeperService _storagesDataKeeperService;
