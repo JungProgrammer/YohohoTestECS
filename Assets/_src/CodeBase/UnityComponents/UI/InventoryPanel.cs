@@ -14,6 +14,6 @@ namespace YohohoTest._src.CodeBase.UnityComponents.UI
 
 
         public void UpdateItemsCount(int count) =>
-            _itemsCountText.text = $"{_textPrefix} {count.ToString()}";
+            _itemsCountText.text = count.ToString();
     }
 }
